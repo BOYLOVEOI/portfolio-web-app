@@ -32,11 +32,11 @@ for index, row in df.iterrows():
     # With C3 (adding onto column 3)
     with c3:
         # If index+1 of row is not evenly divisible by 2 (odd numbers)
-        if (index + 1) % 2 != 0:
+        if index % 2 == 0:
             # Create header with the title of the row at the current index
             c3.header(df['title'][index])
             # Render image of the row at the current index
-            c3.image('images/{}.png'.format(index+1))
+            c3.image('images/{}'.format(df['image'][index]))
             # Render description of row at the current index
             c3.write(df['description'][index])
             # Render link to source code 
@@ -44,9 +44,9 @@ for index, row in df.iterrows():
             
     # Same process as above for column 4
     with c4:
-        if (index + 1) % 2 == 0:  
+        if index % 2 != 0:  
             c4.header(df['title'][index])
-            c4.image('images/{}.png'.format(index+1))
+            c4.image('images/{}'.format(df['image'][index]))
             c4.write(df['description'][index])
             c4.write("[Source Code]({})".format(df['url'][index]))
 
