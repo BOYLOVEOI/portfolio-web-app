@@ -22,10 +22,10 @@ with c2:
     c2.info(content)
 
 # Sectioning off my applications list
-st.title("My Application")
+st.title("My Applications")
 
 # Creating new columns (to list the apps)
-c3,c4 = st.columns(2)
+c3,empty_col, c4 = st.columns([1.5,.5,1.5])
 
 # Going through each row in the dataframe
 for index, row in df.iterrows():
