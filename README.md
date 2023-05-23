@@ -9,5 +9,5 @@ This is a web application, created through the Streamlit module, to showcase cur
 - PDF Generator
 - Excel Invoices to PDF
 - Daily News E-mail
-- Weather API 
+- Weather API (integrated through Streamlit)
 - etc.
